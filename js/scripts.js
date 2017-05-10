@@ -28,7 +28,8 @@ Player.prototype.Rollscore = function (){
     this.arrayRollScore.push(this.dice);
   } else if (this.dice === 1){
     this.arrayRollScore = 0 ;
-  }
+    //Try to reset .turn-total
+    }
   return this.arrayRollScore;
 }
 
@@ -61,5 +62,7 @@ $(document).ready(function() {
 
   $("button#hold").click(function(){
     $(".over-all-total").text(player1.SumArray());
+    $(".turn-total").text("");
+    //Try to reset .turn-total
   });
 });
