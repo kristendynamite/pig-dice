@@ -1,3 +1,6 @@
+.row {
+  padding-left: 20%;
+}
 #dice-number {
   /*background-color: yellow;*/
   border: solid 2px red;
@@ -8,4 +11,28 @@
   padding-top: 32px;
   margin: 15px;
   font-size: 25px;
+}
+
+#dice-number-2 {
+  /*background-color: yellow;*/
+  border: solid 2px red;
+  border-radius: 100%;
+  width:100px;
+  height: 100px;
+  text-align: center;
+  padding-top: 32px;
+  margin: 15px;
+  font-size: 25px;
+}
+
+#restart {
+  margin-left: 40%;
+  margin-top: 30px;
+  font-size: 30px;
+  background-color: #aee888;
+  border-radius: 10px;
+}
+
+.jumbotron {
+  text-align: center;
 }
