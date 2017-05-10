@@ -1,0 +1,11 @@
+#dice-number {
+  /*background-color: yellow;*/
+  border: solid 2px red;
+  border-radius: 100%;
+  width:100px;
+  height: 100px;
+  text-align: center;
+  padding-top: 32px;
+  margin: 15px;
+  font-size: 25px;
+}

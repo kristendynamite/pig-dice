@@ -24,11 +24,25 @@ Player.prototype.Roll  = function(min, max) {
 // Push into a global Array
 // var rollScore = []; // try to make it local, how
 Player.prototype.Rollscore = function (){
-  if (this.dice){
+  if (this.dice > 1){
     this.arrayRollScore.push(this.dice);
+  } else if (this.dice === 1){
+    this.arrayRollScore = 0 ;
   }
   return this.arrayRollScore;
 }
+
+Player.prototype.SumArray = function (){
+  // this.arrayRollScore.split(",");
+  // debugger
+  this.rollScore=0;
+  for(var i in this.arrayRollScore) {
+    this.rollScore += parseInt(this.arrayRollScore[i]);
+  }
+  return this.rollScore;
+}
+
+
 
 
 
@@ -43,5 +57,9 @@ $(document).ready(function() {
   $("button#roll").click(function(){
     $("#dice-number").text(player1.Roll());
     $(".turn-total").text(player1.Rollscore());
+  });
+
+  $("button#hold").click(function(){
+    $(".over-all-total").text(player1.SumArray());
   });
 });
