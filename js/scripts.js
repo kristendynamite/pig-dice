@@ -39,6 +39,10 @@ Player.prototype.SumArray = function (){
   this.rollScore=0;
   for(var i in this.arrayRollScore) {
     this.rollScore += parseInt(this.arrayRollScore[i]);
+    if(this.rollScore >= 100){
+      alert("You won!")
+      this.dice = "";
+    }
   }
   return this.rollScore;
 }
@@ -58,11 +62,16 @@ $(document).ready(function() {
   $("button#roll").click(function(){
     $("#dice-number").text(player1.Roll());
     $(".turn-total").text(player1.Rollscore());
+
   });
 
   $("button#hold").click(function(){
     $(".over-all-total").text(player1.SumArray());
     $(".turn-total").text("");
     //Try to reset .turn-total
+
+    $("button#restart").click(function(){
+       location.reload();
+    })
   });
 });
