@@ -17,14 +17,17 @@ Player.prototype.Roll  = function() {
 }
 
 Player.prototype.Rollscore = function (){
+
   if (this.dice > 1){
     this.arrayRollScore.push(this.dice);
     console.log(this);
     return this.arrayRollScore;
+  }
+  // else if (this.dice === 1)
+  //   {break};
   // } else if (this.dice === 1){
     // this.arrayRollScore = 0 ;
   //   //Try to reset .turn-total
-  }
 }
 
 Player.prototype.SumArray = function (){
