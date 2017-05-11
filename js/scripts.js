@@ -26,9 +26,6 @@ Player.prototype.SumArray = function (){
   var result = 0;
   for(var i = 0; i < this.arrayRollScore.length; i++) {
     result += parseInt(this.arrayRollScore[i]);
-    }
-  if(result >= 100){
-    alert("You won!")
   }
   return result;
 }
@@ -48,6 +45,9 @@ $(document).ready(function() {
 
   $("button#hold").click(function(){
     player1.totalScore += player1.SumArray();
+    if(player1.totalScore >= 100){
+      alert("You won!")
+    }
     $(".over-all-total").text(player1.totalScore);
     player1.arrayRollScore = [];
   });
@@ -59,6 +59,9 @@ $(document).ready(function() {
 
   $("button#hold-2").click(function(){
     player2.totalScore += player2.SumArray();
+    if(player2.totalScore >= 100){
+      alert("You won!")
+    }
     $(".over-all-total-2").text(player2.totalScore);
     player2.arrayRollScore = [];
   });
