@@ -1,7 +1,14 @@
+body{
+  background-image:  url("https://img.clipartfest.com/55a03cfaabac9629ed8645e8b507560c_-farm-ppt-backgrounds-farm-field-clipart-background_1024-768.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #41a233;
+}
+
 .row {
   padding-left: 20%;
 }
-#dice-number {
+#dice-number, #dice-number-2 {
   /*background-color: yellow;*/
   border: solid 2px grey;
   border-radius: 10%;
@@ -11,32 +18,40 @@
   padding-top: 32px;
   margin: 15px;
   font-size: 25px;
-}
-
-#dice-number-2 {
-  /*background-color: yellow;*/
-  border: solid 2px grey;
-  border-radius: 10%;
-  width:100px;
-  height: 100px;
-  text-align: center;
-  padding-top: 32px;
-  margin: 15px;
-  font-size: 25px;
+  background-color: white;
 }
 
 #restart {
+  border-style: none;
   margin-left: 40%;
-  margin-top: 30px;
+  margin-top: 230px;
   font-size: 30px;
-  background-color: #aee888;
+  background-color: #485156;
+  color: white;
   border-radius: 10px;
+  padding: 10px;
+  font-family:'Crafty Girls';
 }
 
+#roll, #hold, #roll-2, #hold-2 {
+  border-style: none;
+  font-size: 20px;
+  background-color: #66af43;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  font-family:'Crafty Girls';
+}
 .jumbotron {
   text-align: center;
+  background-color: #b2e1ec;
 }
 
-img{
-  width: 100px;
+h1 {
+  font-family:'Crafty Girls';
+  font-weight: bolder;
+}
+
+button:focus {
+  outline: 0;
 }

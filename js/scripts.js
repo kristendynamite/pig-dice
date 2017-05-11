@@ -7,46 +7,31 @@ function Player(dice, rollScore, totalScore) {
 }
 //WE NEED TO DECLARE THE ARRAY AS AN EMPTY ARRAY, BUT IT IS NOT PART OF OUR CONSTRUCTOR 'PARAMETERS'...SO WE DON'T OVERWRITE OUR ARRAY EVERY TIME A PLAYER ROLL THE DICE.
 
-// function Game(playerOne, playerTwo) {
-//   this.playerOne = playerOne;
-//   this.playerTwo = playerTwo;
-// }
 Player.prototype.Roll  = function() {
   this.dice = Math.floor((Math.random() * 6) + 1);
   return this.dice;
 }
 
 Player.prototype.Rollscore = function (){
-
-  // this.arrayRollScore.push(this.dice);
-  //
-  if (this.dice > 1){
+  if (this.dice > 1) {
     this.arrayRollScore.push(this.dice);
     return this.arrayRollScore;
-  }
-    else if (this.dice === 1){
+  } else if (this.dice === 1) {
     this.arrayRollScore = [];
     console.log(this.arrayRollScore);
-  }
-  return this.arrayRollScore;
-
-  // } else if (this.dice === 1){
-    // this.arrayRollScore = 0 ;
-  //   //Try to reset .turn-total
+  } return this.arrayRollScore;
 }
 
 Player.prototype.SumArray = function (){
   var result = 0;
   for(var i = 0; i < this.arrayRollScore.length; i++) {
     result += parseInt(this.arrayRollScore[i]);
-    if(result >= 100){
-      alert("You won!")
     }
+  if(result >= 100){
+    alert("You won!")
   }
   return result;
 }
-
-
 
 //user interface logic
 $(document).ready(function() {
@@ -61,12 +46,10 @@ $(document).ready(function() {
     $(".turn-total").text(player1.Rollscore());
   });
 
-
   $("button#hold").click(function(){
     player1.totalScore += player1.SumArray();
     $(".over-all-total").text(player1.totalScore);
     player1.arrayRollScore = [];
-
   });
 
   $("button#roll-2").click(function(){
